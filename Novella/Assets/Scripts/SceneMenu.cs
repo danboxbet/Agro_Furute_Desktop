@@ -16,9 +16,13 @@ public class SceneMenu : MonoBehaviour
     }
     public void LoadLastReplic()
     {
-        settings.StopCoroutine(settings.IsTypingCoroutine);
-        var dialogCount = settings.IsSceneScriptableObject.IsDialog.Count;
-        var personCount = settings.IsSceneScriptableObject.IsDialog[dialogCount - 1].person.Count;
-        settings.SetDialogNum(dialogCount - 1, personCount - 1);
+        if (!settings.IsLastPerson)
+        {
+
+            settings.StopCoroutine(settings.IsTypingCoroutine);
+            var dialogCount = settings.IsSceneScriptableObject.IsDialog.Count;
+            var personCount = settings.IsSceneScriptableObject.IsDialog[dialogCount - 1].person.Count;
+            settings.SetDialogNum(dialogCount - 1, personCount - 1);
+        }
     }
 }

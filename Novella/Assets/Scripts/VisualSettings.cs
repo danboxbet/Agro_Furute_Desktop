@@ -25,6 +25,9 @@ public class VisualSettings : MonoBehaviour
     int person = 0;
     int replic = 0;
 
+    public bool IsLastDialog => IsSceneScriptableObject.IsDialog[dialog] == IsSceneScriptableObject.IsDialog[IsSceneScriptableObject.IsDialog.Count - 1];
+    public bool IsLastPerson => IsSceneScriptableObject.IsDialog[dialog].person[person] == IsSceneScriptableObject.IsDialog[IsSceneScriptableObject.IsDialog.Count - 1].person[IsSceneScriptableObject.IsDialog[IsSceneScriptableObject.IsDialog.Count - 1].person.Count - 1];
+    public int CurrentReplic => replic;
     private void Awake()
     {
         AudioInspector.ChangeVolume += ChangeImageSound;
