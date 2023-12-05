@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class MainMenu : MonoBehaviour
 {
     [SerializeField] private Button buttonContinue;
+    
     private string filename = "levelProgress";
     private int levelIndex;
     private void Awake()

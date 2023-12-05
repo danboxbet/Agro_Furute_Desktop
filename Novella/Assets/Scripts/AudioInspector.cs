@@ -29,7 +29,7 @@ public class AudioInspector : MonoBehaviour
     {
        
 
-        if (IsOn==2 || IsOn==0)
+        if (IsOn==2)
         {
             IsOn = 1;
            
@@ -37,7 +37,7 @@ public class AudioInspector : MonoBehaviour
             PlayerPrefs.SetInt("musicVolume", IsOn);
             ChangeVolume.Invoke(IsOn);
         }
-        else if(IsOn==1)
+        else if(IsOn==1 || IsOn == 0)
         {
             IsOn = 2;
            

@@ -441,6 +441,7 @@
 "Assets/Scripts/Params.cs"
 "Assets/Scripts/Saver.cs"
 "Assets/Scripts/SceneMenu.cs"
+"Assets/Scripts/SceneSettingHelper.cs"
 "Assets/Scripts/UIScripts/ButtonSound.cs"
 "Assets/Scripts/UIScripts/SettingAudioMixer.cs"
 "Assets/Scripts/UIScripts/SettingsStorage (1).cs"

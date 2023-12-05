@@ -21,6 +21,8 @@ public class SoundSettings : MonoBehaviour
     public void SettingAudioMixer() => SetStartSetting();
     void Start()
     {
+        
+
         slider.onValueChanged.AddListener(UpdateText);
        
         SetStartSetting();
@@ -34,6 +36,7 @@ public class SoundSettings : MonoBehaviour
     {
         if (SettingsStorage.TryGetPrefs(branchAudioMixers + " branch"))
         reduceValue = SettingsStorage.LoadFloatSetting(branchAudioMixers + " branch");
+        else if (branchAudioMixers == "Master") reduceValue = -20;
 
         slider.value = (reduceValue - minValue) / 100;
 
